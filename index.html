@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Guest Search</title>
+    <link rel="stylesheet" href="addressbook.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <script defer type="text/javascript" src="addressbook.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+</head>
+
+<body>
+    <form class="pop-up" id="add-form">  
+        <header>
+            <div>Add New Profile</div>
+            <button type="button" class="exit-button">x</button>
+        </header>
+        <main>
+            <label for="fname">First Name</label><br>
+            <input id="fname" required><br> 
+            <label for="lname">Last Name</label><br>
+            <input id="lname" required><br> 
+            <label for="resid">Reservation Number</label><br> 
+            <input id="resid" required><br> 
+            <label for="member">Loyalty Member</label><br> 
+            <input id="member" class="member" type="checkbox">
+            <span class="toggle"></span>
+            <br>
+            <button class="submit" >Submit</button>
+        </main>
+    </form>
+    <form class="pop-up" id="edit-form">  
+        <header>
+            <div>Edit Profile</div>
+            <button type="button" class="exit-button">x</button>
+        </header>
+        <main>
+            <label for="edit-fname">First Name</label><br>
+            <input id="edit-fname" ><br> 
+            <label for="edit-lname">Last Name</label><br>
+            <input id="edit-lname" ><br> 
+            <label for="edit-resid">Reservation Number</label><br> 
+            <input id="edit-resid" ><br> 
+            <label for="edit-member">Loyalty Member</label><br> 
+            <input id="edit-member" class="member" type="checkbox">
+            <span class="toggle"></span>
+            <br>
+            <button class="submit" id="update" type="button">Update</button>
+            <button id="delete" type="button">Delete</button>
+        </main>
+    </form>
+    <div class="content">
+        <header> Guest Search</header>
+        <main>
+            <div class="action-menu">
+                <div class="search-label">
+                    <input class="search" placeholder="Search"> 
+                </div>
+                <button class="add-button">Add New Profile</button>
+            </div>
+            <div class="address-book">
+                <div class="header container">
+                    <div class="sort detail" id="name-header">Name</div>
+                    <div class="sort detail" id="resId-header">Reservation Number</div>
+                    <div class="sort detail" id="member-header">Loyalty Member</div>
+                </div>
+                <div class="profile-table">
+                    <div class="container hide" id="nonmatch"> 
+                        <div class="detail">No matching records found</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </main>
+    </div>
+    
+</body>
+
+</html>
